@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './images/logo.svg';
+import logo from './images/logo.png';
 import { FaBars } from 'react-icons/fa';
 import { useGlobalContext } from './context';
 import { BrowserRouter as Router,Link, Route, Switch } from "react-router-dom";
@@ -41,9 +41,12 @@ const Navbar = () => {
             </button>
           </li>
           <li>
-            <button className='link-btn' onMouseOver={displaySubmenu}>
+          <button className='link-btn' >
+             <Link to="/viewdue">Due Tasks</Link>
+          </button>
+            {/* <button className='link-btn' onMouseOver={displaySubmenu}>
               Notification
-            </button>
+            </button> */}
           </li>
         </ul>
         

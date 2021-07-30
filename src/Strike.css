@@ -1,0 +1,14 @@
+.strikeoff{
+    text-decoration: line-through;
+}
+
+.btnarticle{
+    height: 100%;
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.1rem;
+    color: blue;
+      /* text-transform: capitalize; */
+    letter-spacing: 1px;
+    width: 10rem;
+}

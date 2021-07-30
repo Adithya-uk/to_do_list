@@ -21,7 +21,7 @@ const sublinks = [
   {
     page: 'Notification',
     links: [
-      { label: 'Due', icon: <FaBriefcase />, url: '/due' },
+      { label: 'Due', icon: <FaBriefcase />, url: 'viewdue' },
       { label: 'Remaining Task', icon: <FaBriefcase />, url: '/remtask' },
     ],
   },

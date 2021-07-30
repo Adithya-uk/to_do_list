@@ -10,7 +10,7 @@ const UseLoginform = (callback, validate) => {console.log("empty string")
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting1, setIsSubmitting1] = useState(false);
-  const [login,setLogin] = useState({});
+  const [login,setLogin] = useState([]);
   // const response = 'False';
 
   const handleChange1 = e => {console.log("empty string222")
@@ -21,9 +21,26 @@ const UseLoginform = (callback, validate) => {console.log("empty string")
     });
   };
 
+  console.log("just done with handlechange")
+  
+
   const handleSubmit1 = e => {console.log("empty string3333")
     e.preventDefault();
-    
+    console.log("heyyy",values)
+  fetch('/api/login',{
+    method: 'POST',
+    body : JSON.stringify({
+    content:values
+  }) ,headers: {
+    "Content-type":"application/json; charset=UTF-8"
+   
+ }
+ }).then(resp => resp.json())
+ .then(resp => setLogin(resp))
+ .catch(error => console.log(error)
+);
+
+console.log("just done with useeffect")
     
     setErrors(validate(values));
     
@@ -31,18 +48,7 @@ const UseLoginform = (callback, validate) => {console.log("empty string")
     console.log(values)
     
     
-    fetch('/api/login',{
-      method: 'POST',
-      body : JSON.stringify({
-      content:values
-    }) ,headers: {
-      "Content-type":"application/json; charset=UTF-8"
-     
-   }
-   }).then(response => response.json())
-   .then(message => setLogin((message)),
-    console.log(login)
-);
+    
   
     //  .then(message => setLogininfo({message:logininfo}))
    
@@ -77,6 +83,11 @@ const UseLoginform = (callback, validate) => {console.log("empty string")
     //  </div>
     setIsSubmitting1(true);
   };
+  console.log("just done with handlesubmit")
+
+  
+
+console.log(login)
 
   useEffect(
     () => {
@@ -86,6 +97,8 @@ const UseLoginform = (callback, validate) => {console.log("empty string")
     },
     [errors]
   );
+  console.log("just done with erroruseeffect")
+
 
   return { handleChange1, handleSubmit1, values, errors };
 };

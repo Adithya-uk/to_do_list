@@ -11,8 +11,7 @@ import Due from './Due';
 import RemTask from './RemTask';
 import Lform from './Lform';
 import Today from './Today'
-// import Loginnew from './Loginnew';
-
+import ViewDue from './ViewDue';
 // import Signup from './pages/Signup';
 
 function Routes(){
@@ -22,12 +21,14 @@ function Routes(){
                 <FormLogin />
             </Route>
 
-            {/* <Route exact path = "/newlogin">
-                <Loginnew />
-            </Route> */}
+            
 
             <Route exact path = "/formlogin">
                 <Lform />
+            </Route>
+
+            <Route exact path = "/viewdue">
+                <ViewDue />
             </Route>
 
             <Route exact path = "/addtask">

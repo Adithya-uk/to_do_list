@@ -16,9 +16,9 @@ const Aboutus = () => {
         <span className='close-btn'>×</span>
         <div className='split left'>
         <div className='centered1'>
-          <p className = "aboutushead" >About Us</p>
+          <p className = "aboutushead" >TickyDO</p>
           <br></br><br></br>
-          <p className ="aboutus">Managing things are</p>
+          <p className ="aboutus">Your organizing and planning companion !</p>
         </div>
         </div>
         </div>

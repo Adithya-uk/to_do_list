@@ -85,12 +85,13 @@ const FormSignup = ({ submitForm }) => {
           
         </span> */}
       </form>
-    </div>
-    
-  <span className='form-input-login'>
+      <span className='form-input-login'>
           Already have an account? Login <Link to="/formlogin">here</Link>
           
         </span>
+    </div>
+    
+  
     
    
     

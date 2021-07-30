@@ -1,5 +1,5 @@
 import React from 'react';
-import phoneImg from './images/phone.svg';
+import phoneImg from './images/phone.png';
 import { useGlobalContext } from './context';
 
 const Hero = () => {
@@ -9,10 +9,10 @@ const Hero = () => {
       <div className='hero-center'>
         <article className='hero-info'>
           <h1>
-            Home page
+            Welcome
           </h1>
           <p>
-            blah blah blah blahhhhhhhhh
+           A task manager you can trust ...
           </p>
           {/* <button className='btn'>Start now</button> */}
         </article>

@@ -1,6 +1,7 @@
 import React from 'react'
 import APIService from './APIService'
-
+import './Strike.css'
+import Hello from './Hello'
 function ArticleList(props) {
 
 
@@ -10,6 +11,9 @@ function ArticleList(props) {
 
     }
 
+    const strikeArticle = (article) => {
+        
+    }
     
 
 
@@ -21,7 +25,7 @@ function ArticleList(props) {
             {props.articles && props.articles.map(article => {
             return (
                 <div key = {article.id}>
-                    <p className = 'strikeoff'>{article.taskdesc}</p>
+                    <button className='btnarticle' onClick = {() => strikeArticle(article)}>{article.taskdesc}</button>
                     <p>{article.tasktime}</p>
                     <p>{article.taskdate}</p>
                     {/* <p>{article.tasktime}</p> */}
